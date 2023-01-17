@@ -24,7 +24,7 @@
       - Smoke testing is using localhost:8000 and unit testing uses code coverage with pytest on different containers(products,orders and gateway)
       
 
-    3. What are the alternatives ? What are the pros and cons
+    2. What are the alternatives ? What are the pros and cons
    
     Answers:
       - We can use Monilithic Architecture ==> pro - good for legacy applications | con - very difficult to manage as its tighly coupled
