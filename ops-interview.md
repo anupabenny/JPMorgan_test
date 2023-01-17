@@ -18,8 +18,8 @@
     1. How does this framework support micro-services architecturally?
     
     Answers:
-      - Conda creates environment favourable to nameko-devex and the full stack is created on this environment
-      - Products, orders and gateway are seperate docker containers connected with RabbitMQ which takes the advantage of loose coupling instead of a Monolithic architecture.
+      - Conda creates environment favourable to nameko-devex and the full stack is created in this environment
+      - Products, orders and gateway services are seperate docker containers connected with RabbitMQ which takes the advantage of loose coupling instead of a Monolithic architecture.
       - It opens different ports in host(8000,8001,8002,8003), which makes troubleshooting and fixing easier
       - Smoke testing is using localhost:8000 and unit testing uses code coverage with pytest on different containers(products,orders and gateway)
       
