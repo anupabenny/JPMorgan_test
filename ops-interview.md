@@ -64,10 +64,10 @@ Pros-
 -  Epinio eliminates the need of CI/CD pipelines which make the job of Operators easier
 
  Security:
--  Security team can make sure of the validity of self-signed and CA certificates which are required for Epinio login
+-  Epinio is secured with self signed and CA certificates
 -  As container images are saved in private repo, its secured
 
 Cons-
 
 - Difficult to manage backend Kubernetes cluster( upgrade of K8s internal components)
-- Self Signed and CA certificates needs to be validated and renewed
+- Self Signed and CA certificates need to be validated and renewed
