@@ -19,7 +19,7 @@
     
     Answers:
       - Conda creates environment favourable to nameko-devex and the full stack is created on this environment
-      - Products, orders and gateway are seperate docker containers connected with RabbitMQ wich takes the advantage of loose coupling instead of a Monolithic application.
+      - Products, orders and gateway are seperate docker containers connected with RabbitMQ which takes the advantage of loose coupling instead of a Monolithic architecture.
       - It opens different ports in host(8000,8001,8002,8003), which makes troubleshooting and fixing easier
       - Smoke testing is using localhost:8000 and unit testing uses code coverage with pytest on different containers(products,orders and gateway)
       
@@ -32,13 +32,14 @@
       - Use Cloud with manual deployment of each application with Jenkins ==> pro - Autoscaling and easy deployment | con - Need to manage Infra
     
 2. Install/Automate [Epinio](https://docs.epinio.io/installation/install_epinio) (locally with docker/k3d with IP_ADDR.sslip.io as system domain)
-    1. Understand what is framework is trying to abstract out? Does it make thing easier for developers/operator by using epinio vs native K8
+    1. Understand what this framework is trying to abstract out? Does it make thing easier for developers/operator by using epinio vs native K8
 
 Answers:
 -  Epinio is a Kubernetes-powered application development engine and uses Epinio CLI to deploy to kubernetes.
 -  In current exercise, product, order and gateway components are docker images, it can be easily deployed to kubernetes. 
+
 yes it is easy for Developers/Operators using Epinio
--  Epinio is installed from a single Helm chart and makes easy for developers/operators to see live instance of their system that's accessible at a URL
+-  Epinio is installed from a single Helm chart and makes easy for developers/operators to see live instance of their system which is accessible at a URL
 -  Epinio needs Ingress-controller (nginx or traefik) for exposing application to URL in production
 -  Also needs cert-manager to acquire TLS certificates for the apps
 -  Epinio allows Developers to push code straight to the platform and it inspects the source, selects an appropriate buildpack and creates Kubernetes objects to deploy the app
@@ -68,5 +69,5 @@ Pros-
 
 Cons-
 
-- A Kuberntes cluster needs to be maintained ( upgrade of K8s internal components)
-- Certificates needs to be validated and renewed
+- Difficult to manage backend Kubernetes cluster( upgrade of K8s internal components)
+- Self Signed and CA certificates needs to be validated and renewed
