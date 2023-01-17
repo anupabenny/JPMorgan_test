@@ -23,7 +23,9 @@
       - It opens different ports in host(8000,8001,8002,8003), which makes troubleshooting and fixing easier
       - Smoke testing is using localhost:8000 and unit testing uses code coverage with pytest on different containers(products,orders and gateway)
       
+
     3. What are the alternatives ? What are the pros and cons
+   
     Answers:
       - We can use Monilithic Architecture ==> pro - good for legacy applications | con - very difficult to manage as its tighly coupled
       - Use multi-cluster kubernetes with helm ==> pro - Easy deployment of apps | con - Need to manage K8S infra and difficult to setup infra
@@ -46,22 +48,25 @@ yes it is easy for Developers/Operators using Epinio
     1. What are the pros/cons for develops, operators, security etc
      
 Answers:
+
 Pros-
-  Developers:
+
+ Developers:
 -  Developers can concentrate on developing their application/business logic and build own images and store in repository or use Paketo Buildpack.
 -  Advantage of using Epinio is once Epinio has been installed, no further Kubernetes knowledge is needed for developers.
 -  Epinio is adding the needed abstractions and intelligence to allow Developers to use Kubernetes as a PaaS (Platform as a Service).
 -  It’s quick to set up, simple to use and suitable for all environments
 
-  Operators:
+ Operators:
 -  Because Epinio runs within your own Kubernetes cluster, Operators can interact directly with Kubernetes to monitor running apps, optimize cluster performance and act on problems.
 -  They can decide how the cluster is set up (including how Epinio is installed) and how application should be deployed
 -  Epinio eliminates the need of CI/CD pipelines which make the job of Operators easier
 
-  Security:
+ Security:
 -  Security team can make sure of the validity of self-signed and CA certificates which are required for Epinio login
 -  As container images are saved in private repo, its secured
 
 Cons-
+
 - A Kuberntes cluster needs to be maintained ( upgrade of K8s internal components)
 - Certificates needs to be validated and renewed
