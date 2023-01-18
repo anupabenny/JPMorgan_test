@@ -25,13 +25,13 @@ Alternatives are listed below:
     1. Understand what this framework is trying to abstract out? Does it make thing easier for developers/operator by using epinio vs native K8
 
 Answers:
-    1. Epinio is a Kubernetes-powered application development engine and uses Epinio CLI to deploy to kubernetes.
-    2. In current exercise, product, order and gateway components are docker images, it can be easily deployed to kubernetes using Epinio. 
+1. Epinio is a Kubernetes-powered application development engine and uses Epinio CLI to deploy to kubernetes.
+2. In current exercise, product, order and gateway components are docker images, it can be easily deployed to kubernetes using Epinio. 
     Yes, it is easy for Developers/Operators using Epinio because of the following:
-    -  Epinio is installed from a single Helm chart and makes easy for developers/operators to see live instance of their system which is accessible at a URL
-    -  Epinio needs Ingress-controller (nginx or traefik) for exposing application to URL in production
-    -  Also needs cert-manager to acquire TLS certificates for the apps
-    -  Epinio allows Developers to push code straight to the platform and it inspects the source, selects an appropriate buildpack and creates Kubernetes objects to   deploy the app
+    - Epinio is installed from a single Helm chart and makes easy for developers/operators to see live instance of their system which is accessible at a URL
+    - Epinio needs Ingress-controller (nginx or traefik) for exposing application to URL in production
+    - Also needs cert-manager to acquire TLS certificates for the apps
+    - Epinio allows Developers to push code straight to the platform and it inspects the source, selects an appropriate buildpack and creates Kubernetes objects to   deploy the app
 
 
 3. Execute [README-DevOps.md](https://github.com/gitricko/nameko-devex/blob/master/README-DevOps.md) but on [Epinio](https://github.com/epinio/epinio)
@@ -40,6 +40,7 @@ Answers:
 Answers:
 
 Pros:
+
 Developers:
 -  Developers can concentrate on developing their application/business logic and build own images and store in repository or use Paketo Buildpack.
 -  Advantage of using Epinio is that once it has been installed, no further Kubernetes knowledge is needed for developers.
