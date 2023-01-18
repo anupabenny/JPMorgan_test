@@ -15,17 +15,11 @@ This framework supports micro-services architecturally, considering the below:
 - Smoke testing uses localhost:8000 and unit testing uses code coverage with pytest on different containers (products,orders and gateway)
       
 Alternatives are listed below:
-- We can use Monilithic Architecture
-- Pros: Good for legacy applications
-- Cons: Very difficult to manage as its tighly coupled
+- We can use Monilithic Architecture / Pros: Good for legacy applications / Cons: Very difficult to manage as its tighly coupled
 
-- Use multi-cluster kubernetes with helm
-- Pros: Easy deployment of apps
-- Cons: Need to manage K8S infra and difficult to setup infra
+- Use multi-cluster kubernetes with helm / Pros: Easy deployment of apps / Cons: Need to manage K8S infra and difficult to setup infra
 
-- Use Cloud with manual deployment of each application with Jenkins
-- Pros: Autoscaling and easy deployment
-- Cons: Need to manage Infra
+- Use Cloud with manual deployment of each application with Jenkins / Pros: Autoscaling and easy deployment / Cons: Need to manage Infra
     
 2. Install/Automate [Epinio](https://docs.epinio.io/installation/install_epinio) (locally with docker/k3d with IP_ADDR.sslip.io as system domain)
     1. Understand what this framework is trying to abstract out? Does it make thing easier for developers/operator by using epinio vs native K8
