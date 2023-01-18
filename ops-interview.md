@@ -15,10 +15,10 @@ This framework supports micro-services architecturally, considering the below:
 - Smoke testing uses localhost:8000 and unit testing uses code coverage with pytest on different containers (products,orders and gateway)
       
 Alternatives are listed below:
-    1. We can use Monilithic Architecture
-        Pros: Good for legacy applications
-        Cons: Very difficult to manage as its tighly coupled
-    2. Use multi-cluster kubernetes with helm
+- We can use Monilithic Architecture
+-   Pros: Good for legacy applications
+-   Cons: Very difficult to manage as its tighly coupled
+- Use multi-cluster kubernetes with helm
         Pros: Easy deployment of apps
         Cons: Need to manage K8S infra and difficult to setup infra
     3. Use Cloud with manual deployment of each application with Jenkins
