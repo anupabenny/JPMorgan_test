@@ -27,7 +27,6 @@ Alternatives are listed below:
 Answers:
     1. Epinio is a Kubernetes-powered application development engine and uses Epinio CLI to deploy to kubernetes.
     2. In current exercise, product, order and gateway components are docker images, it can be easily deployed to kubernetes using Epinio. 
-    
     Yes, it is easy for Developers/Operators using Epinio because of the following:
     -  Epinio is installed from a single Helm chart and makes easy for developers/operators to see live instance of their system which is accessible at a URL
     -  Epinio needs Ingress-controller (nginx or traefik) for exposing application to URL in production
